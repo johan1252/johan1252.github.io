@@ -50,6 +50,7 @@ p.enlarge span { color: #000 }
 /* Personal Image */
 .circular--square {
   border-radius: 50%;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 /* //-- section styles -- */
