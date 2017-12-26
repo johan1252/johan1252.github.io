@@ -40,8 +40,8 @@
      js.src = "https://connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-   userRef = Math.floor((Math.random() * 10000000000000) + 1);
-  jQuery('body').append('<div class="fb-customerchat" page_id="313985559088215" ref="{{userRef}}" minimized="false"> </div>');
+   let userRef = Math.floor((Math.random() * 10000000000000) + 1);
+  jQuery('body').append('<div class="fb-customerchat" page_id="313985559088215" ref="${userRef}" minimized="false"> </div>');
 </script>
   
 <style>
