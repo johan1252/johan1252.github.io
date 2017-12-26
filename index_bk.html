@@ -18,14 +18,15 @@
 
 	.popup{
 	  position:fixed;
-	  left:50vw;
-	  margin-left:35px;
-	  top:50vh;
-	  margin-top:-210px;
+	  right:10vw;
+	  margin-right:35px;
+	  bottom:5vh;
+	  margin-bottom:-10px;
 	  opacity:0;
 	  transition:all 1s;
 	  -webkit-transition:all 1s;
 	}
+
 
 
 	.popup div
@@ -76,6 +77,14 @@
 	  opacity:1;
 	}	
 	
+	.p {
+  	  position:fixed;
+  	  right:2vw;
+  	  margin-right:10px;
+  	  bottom:5vh;
+  	  margin-bottom:-10px;
+	}
+	
 	.p:hover ~.popup
 	{
   	  margin-left:45px;
@@ -107,7 +116,7 @@
      js.src = "https://connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-  jQuery('body').append('<div class="fb-customerchat p" page_id="313985559088215" minimized="false"> </div>');
+  jQuery('body').append('<div class="fb-customerchat" page_id="313985559088215" minimized="false"> </div>');
 </script>
 
 <div class="fb-messengermessageus" 
