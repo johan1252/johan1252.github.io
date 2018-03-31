@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<body>
+<div id="video-placeholder"></div>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+var player;
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('video-placeholder', {
+        width: 600,
+        height: 400,
+        videoId: 'vT36E1rGgg0',
+        playerVars: {
+            color: 'white',
+			origin : "http://www.youtube.com"
+        },
+        events: {
+            onReady: initialize
+        }
+    });
+}
+
+function initialize(){
+
+    // Update the controls on load
+    updateTimerDisplay();
+    updateProgressBar();
+
+    // Clear any old interval.
+    clearInterval(time_update_interval);
+
+    // Start interval to update elapsed time display and
+    // the elapsed part of the progress bar every second.
+    time_update_interval = setInterval(function () {
+        updateTimerDisplay();
+        updateProgressBar();
+    }, 1000)
+
+}
+
+// This function is called by initialize()
+function newTime(newTimeIn){
+	var a = newTimein.split(':'); // split it at the colons
+
+	// minutes are worth 60 seconds. Hours are worth 60 minutes.
+	var seconds = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]); 
+    // Skip video to new time.
+    player.seekTo(seconds);
+}
+</script>
+<br>
+<button onclick="newTime(00:00:00)">Olim</button>
+<br>
+<button onclick="newTime(00:01:04)">Bells of Notre Dame </button>
+<br>
+<button onclick="newTime(0)">Out There</button>
+<br>
+<button onclick="newTime(0)">Topsy Turvy (Part One)</button>
+<br>
+<button onclick="newTime(0)">Into Notre Dame</button>
+<br>
+<button onclick="newTime(0)">God Help The Outcasts</button>
+<br>
+<button onclick="newTime(0)">Top Of The World</button>
+<br>
+<button onclick="newTime(0)">Tavern Song</button>
+<br>
+<button onclick="newTime(0)">Heaven's Light</button>
+<br>
+<button onclick="newTime(0)">Hellfire</button>
+<br>
+<button onclick="newTime(0)">Esmeralda</button>
+<br>
+<button onclick="newTime(0)">Entr'acte</button>
+<br>
+<button onclick="newTime(0)">Flight Into Egypt</button>
+<br>
+<button onclick="newTime(0)">The Court Of Miracles</button>
+<br>
+<button onclick="newTime(0)">In A Place Of Miracles</button>
+<br>
+<button onclick="newTime(0)">Justice In Paris</button>
+<br>
+<button onclick="newTime(0)">Someday</button>
+<br>
+<button onclick="newTime(0)">While The City Slumbered</button>
+<br>
+<button onclick="newTime(0)">Made Of Stone</button>
+<br>
+<button onclick="newTime(0)">Finale</button>
+
+
+</body>
+</html>
