@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+</head>
+<body>
+<div id="video-placeholder"></div>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+var player;
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('video-placeholder', {
+        width: 600,
+        height: 400,
+        videoId: 'vT36E1rGgg0', //Real Vid -> vT36E1rGgg0 //Test Vid -> Xa0Q0J5tOP0
+        playerVars: {
+            color: 'white',
+			autoplay: 1,
+			vq: 'medium'
+        },
+        events: {
+            onReady: initialize
+        }
+    });
+}
+
+function initialize(){
+
+}
+
+// This function is called by initialize()
+function newTime(newTimeIn){
+	var a = newTimeIn.split(':'); // split it at the colons
+
+	// minutes are worth 60 seconds. Hours are worth 60 minutes.
+	var seconds = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]); 
+	//var seconds = newTimeIn;
+    // Skip video to new time.
+    player.seekTo(seconds);
+}
+
+// on window load
+window.addEventListener('load', function load(){
+    // attach event listener to button
+    document.getElementById('V1').addEventListener('click', function click(){
+        newTime('00:00:00');
+    }, false);
+    document.getElementById('V2').addEventListener('click', function click(){
+        newTime('00:01:04');
+    }, false);
+    document.getElementById('V3').addEventListener('click', function click(){
+        newTime('00:08:30');
+    }, false);
+    document.getElementById('V4').addEventListener('click', function click(){
+        newTime('00:13:08');
+    }, false);
+    document.getElementById('V5').addEventListener('click', function click(){
+        newTime('00:15:13');
+    }, false);
+    document.getElementById('V6').addEventListener('click', function click(){
+        newTime('00:18:39');
+    }, false);
+    document.getElementById('V7').addEventListener('click', function click(){
+        newTime('00:21:00');
+    }, false);
+    document.getElementById('V8').addEventListener('click', function click(){
+        newTime('00:23:27');
+    }, false);
+    document.getElementById('V9').addEventListener('click', function click(){
+        newTime('00:25:47');
+    }, false);
+    document.getElementById('V10').addEventListener('click', function click(){
+        newTime('00:29:19');
+    }, false);
+    document.getElementById('V11').addEventListener('click', function click(){
+        newTime('00:32:47');
+    }, false);
+    document.getElementById('V12').addEventListener('click', function click(){
+        newTime('00:35:18');
+    }, false);
+    document.getElementById('V13').addEventListener('click', function click(){
+        newTime('00:37:15');
+    }, false);
+    document.getElementById('V14').addEventListener('click', function click(){
+        newTime('00:41:26');
+    }, false);
+    document.getElementById('V15').addEventListener('click', function click(){
+        newTime('00:46:31');
+    }, false);
+    document.getElementById('V16').addEventListener('click', function click(){
+        newTime('00:49:01');
+    }, false);
+    document.getElementById('V17').addEventListener('click', function click(){
+        newTime('00:52:27');
+    }, false);
+    document.getElementById('V18').addEventListener('click', function click(){
+        newTime('00:54:10');
+    }, false);
+    document.getElementById('V19').addEventListener('click', function click(){
+        newTime('00:57:27');
+    }, false);
+    document.getElementById('V20').addEventListener('click', function click(){
+        newTime('00:58:17');
+    }, false);
+    document.getElementById('V21').addEventListener('click', function click(){
+        newTime('01:02:00');
+    }, false);
+    document.getElementById('V22').addEventListener('click', function click(){
+        newTime('01:02:27');
+    }, false);
+    document.getElementById('V23').addEventListener('click', function click(){
+        newTime('01:06:10');
+    }, false);
+    document.getElementById('V24').addEventListener('click', function click(){
+        newTime('01:06:58');
+    }, false);
+}, false);
+</script>
+<br>
+<div class="row">
+  <div class="column" style="">
+	<input id="V1" type="button" value="Olim" />
+	<br>
+	<input id="V2" type="button" value="Bells of Notre Dame" />
+	<br>
+	<input id="V3" type="button" value="Out There" />
+	<br>
+	<input id="V4" type="button" value="Topsy Turvy (Part One)" />
+	<br>
+	<input id="V5" type="button" value="Rest and Recreation" />
+	<br>
+	<input id="V6" type="button" value="Rhythm of the Tambourin" />
+	<br>
+	<input id="V7" type="button" value="Topsy Turvy (Part Two)" />
+	<br>
+	<input id="V8" type="button" value="Into Notre Dame" />
+	<br>
+	<input id="V9" type="button" value="God Help The Outcasts" />
+	<br>
+	<input id="V10" type="button" value="Top Of The World" />
+	<br>
+	<input id="V11" type="button" value="Tavern Song" />
+	<br>
+	<input id="V12" type="button" value="Heaven's Light" />
+	<br>
+	<input id="V13" type="button" value="Hellfire" />
+	<br>
+
+  </div>
+  <div class="column" style="">
+  	<input id="V14" type="button" value="Esmeralda" />
+  	<br>
+  	<input id="V15" type="button" value="Entr'acte" />
+  	<br>
+	<input id="V16" type="button" value="Flight Into Egypt" />
+	<br>
+	<input id="V17" type="button" value="The Court Of Miracles" />
+	<br>
+	<input id="V18" type="button" value="In A Place Of Miracles" />
+	<br>
+	<input id="V19" type="button" value="Justice In Paris" />
+	<br>
+	<input id="V20" type="button" value="Someday" />
+	<br>
+	<input id="V21" type="button" value="While The City Slumbered" />
+	<br>
+	<input id="V22" type="button" value="Made Of Stone" />
+	<br>
+	<input id="V23" type="button" value="Finale" />
+	<br>
+        <input id="V24" type="button" value="Kyrie Eleison" />
+	<br>
+  </div>
+</div>
+
+
+
+</body>
+</html>
